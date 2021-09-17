@@ -80,6 +80,9 @@ footer{
     text-decoration: none;
     color: white;
 }
+a{
+    text-decoration: none !important;
+}
 @media (max-width:768px){
     #aaa{
         font-size: 1em;
