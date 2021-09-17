@@ -1,0 +1,391 @@
+/* ----------------------------------------------FORMATO GRIDS PAGINA DE INICIO */
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    font-family: 'Oswald', sans-serif;
+    background-image: url(./resources/fondo\ pared.jpg) ;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#bodyTienda{
+    background-color: rgba(255, 228, 196, 0.116);
+    background-image: none;
+}
+
+.container{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: 0em 1fr 1fr 7em;
+    grid-row-gap: 1em;
+    grid-column-gap: 1em;
+
+    /* definir sectores: */
+    grid-template-areas:
+    "nav nav nav"
+    "header header header"
+    "home home home"
+    "about aside aside"
+    "footer footer footer"
+    ;
+    /* nav header header
+     nav home aside
+     nav about aside
+     footer footer foter */
+}
+.item{
+    
+    font-size: 2rem;
+    padding: 0.5rem;
+    align-items: stretch;
+    justify-items: stretch;
+}
+header{
+    grid-area: header;
+}
+#home{
+    grid-area: home;
+}
+#about{
+    grid-area: about;
+}
+nav{
+    grid-area: nav;
+}
+
+aside{
+    grid-area: aside;
+}
+footer{
+    grid-area: footer;
+}
+/* --------------------------------BARRA DE NAVEGACION */
+.barraNavegacion{
+    background-color: black;
+    color: white;
+    text-align: right;
+}
+#navegacionItems{
+    color: white;
+    text-align: right;
+    font-size: 2em;
+}
+#bodega{
+    justify-content: center;
+    padding-top: 2%;
+    font-size: 6em;
+    text-decoration: none;
+    color: white;
+}
+@media (max-width:768px){
+    #aaa{
+        font-size: 1em;
+    }
+}
+@media (max-width:768px){
+    #bodega{
+        font-size: 1em;
+    }
+}
+/* -------------------------configuracion espaciado imagenes  */
+ #iiMagen{
+    padding-bottom: 3%;
+    padding-top: 3%
+}
+/* --------------------------------------------- ------------------CSS TIENDA */
+.containerTienda{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: 0px 1fr 1fr 75px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+
+    /* definir sectores: */
+    grid-template-areas:
+    "nav nav nav"
+    "header header header"
+    "aside home home "
+    "footer footer footer"
+    ;
+    /* nav header header
+     nav home aside
+     nav about aside
+     footer footer foter */
+}
+h4{
+    font-size: 0.9rem;
+}
+.body-tienda header{
+    position: relative;
+}
+
+.body-tienda main{
+   margin: 2rem;
+}
+.fas.fa-shopping-cart{
+    font-size: 1.3rem;
+    position: absolute;
+    right: 2rem;
+   
+}
+.fondoTienda{ 
+    padding: 1.8rem 0;
+    margin-top: 2rem;    
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);     
+    grid-row-gap: 30px;   
+}
+
+.fondoTienda article{    
+    color: black; 
+    font-size: 1rem;   
+    display: grid;
+    grid-template-columns: auto; 
+    grid-template-rows: auto auto auto auto;
+    align-items: center;  
+    justify-items: center; 
+    grid-gap: 0.5rem;   
+    
+}
+.fondoTienda img{   
+    grid-row: 1; 
+    width: 70%;
+    height: 70%;  
+}
+.fondoTienda .descripcion {   
+    grid-row: 2;   
+}
+.fondoTienda .precio {   
+    grid-row: 3;   
+}
+/* BOTON AGREGAR */
+.fondoTienda button{   
+    grid-row: 4;
+    padding: 0.3rem;
+    background-color: black;
+    color: white;
+    width: 80px;
+    height: 60px;
+    /* LIMADA DE BORDES, puedo aumentar el % y va quedando mas redondo */
+    border-radius: 10%;
+    /* cuando paso el mouse por arriba pone el dedito para clickear */
+    cursor: pointer;
+    transition: transform 0.25s;
+}
+button:hover{
+    background-color: rgba(211, 204, 218, 0.562);
+    transform: scale(1.2, 1.2);
+}
+/* -------------------------------------------------------------------CSS PAGINA EVENTOS */
+
+
+/* ---------------------MENU DE INICIO*/
+.eventos {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card {
+    flex: 0 0 20ex;
+    margin: 10px;
+    border: 1px solid #ccc;
+    background-color:white;
+  } 
+  .card img {
+    max-width: 100%;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .card {
+    flex:  0 0 40ex;
+    margin: 10px;
+  } 
+  .card img {
+    max-width: 100%;
+  }
+  .card .text {
+    padding: 20px;
+  }
+  .card .text > button {
+    background:black
+    color: white;
+    padding: 10px;
+    width: 100%;
+    }
+  .card .text > button {
+    background: black;
+    border: 0;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    }
+    /* FIN CSS PAGINA EVENTOS  */
+      /* ---------------------------------------------------------------------NOSOTROS */
+      .containerNosotros{
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-columns: 20% auto 20%;
+        grid-template-rows: 0px 1fr 1fr 75px;
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+    
+        /* definir sectores: */
+        grid-template-areas:
+        "nav nav nav"
+        "header header header"
+        "home home home"
+        "footer footer footer"
+        ;
+        /* nav header header
+         nav home aside
+         nav about aside
+         footer footer foter */
+    }
+    .item{
+        
+        font-size: 21px;
+        padding: 5px;
+        align-items: stretch;
+        justify-items: stretch;
+    }
+    header{
+        grid-area: header;
+    }
+    #home{
+        grid-area: home;
+    }
+    nav{
+        grid-area: nav;
+    }
+    
+    aside{
+        grid-area: aside;
+    }
+    footer{
+        grid-area: footer;
+    }
+   
+    
+    /* Flexbox: doble columna formulario - info de contacto */
+    .contenidoNosotros{
+        display: flex;
+        max-width: 100%;
+        /* background-color: rgba(224, 185, 136, 0.116); */
+        background-image: url(./resources/corchos.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    #contacto{
+        padding: 5%;
+        width: 50%;
+    }
+    #gps{
+        width: 50%;
+        align-items: right;
+        color: white;
+        font-size: 2ex;
+    }
+    .tituloFormulario{
+        color: white;
+        font-size: 4ex;
+    }
+    /* -------------------------------------CSS Formulario */
+    *{box-sizing:border-box;}
+
+form{
+	width:300px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+}
+
+/* NOMBRE - AP - TEL - EMAIL */
+form input[type="text"],
+form input[type="email"]{
+	width:100%;
+    height: 100%;
+	padding:3px 10px;
+	border:1px solid white;
+	border-radius:3px;
+	background-color:white;
+	margin:8px 0;
+	display:inline-block;
+}
+/* MENSAJE  */
+textarea{
+	width:100%;
+	height:100px;
+	border:1px  white;
+	border-radius:3px;
+	background-color:white;			
+	margin:8px 0;
+	border-radius:3px;
+	resize:none;
+	display:inline;
+}
+/* BOTON */
+form input[type="submit"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:32px;
+	border:1px solid #000;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#000;
+} 
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+}
+/* posicionando el contenido del recuadro gps: */
+#gps{
+        width:30ex;
+        padding:1ex;
+        border-radius:1ex;
+        margin-top: 2ex;
+
+}
+/* CARRUCEL DE FOTOS */
+#carrusel{
+    align-items: center;
+    image-rendering: optimizeQuality;
+    height: 60em;
+    width: 3em;
+}
+
+/* H1 (debajo de bodega) */
+.animate__fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    color: white;
+}
+.animate__animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.catalogoTitulo {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin
+}
+#h1Tienda{
+    color: black;
+}
